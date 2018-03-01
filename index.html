@@ -9,13 +9,46 @@
 	<meta name="robots" content="noindex">
 	<link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
 	<link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/electerious/pen/MQrRxX">
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+    $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+    $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+    });
+});
+</script>
+
+<style> 
+#panel1, #panel2, #panel3, #panel4{
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+
+    padding: 50px;
+    display: none;
+    
+
+</style>
+
 <style class="cp-pen-styles">
 body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -24,6 +57,7 @@ body {
           align-items: center;
   min-height: 100vh;
   background:white;
+  
 }
 
 .button {
@@ -62,26 +96,47 @@ body {
 .button:hover::before {
   --size: 400px;
 }
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  transform: translateY(4px);
+}
+</style>
+
+</style>
 </style>
 </head>
+
+
+
 <body>
-<button class="button" style="--x:166px; --y:9px;">
-	<span>Project Management</span>
+  
+<div id="panel1">Panel 1</div>
+<div id="panel2">Panel 2</div>
+<div id="panel3">Panel 3</div>
+<div id="panel4">Panel 4</div>
+
+<button id="flip1" class="button" style="--x:166px; --y:9px;">
+	<span>1. Project Management</span>
 </button>
-<button class="button" style="--x:166px; --y:9px;">
-	<span>UX/UI Design</span>
+
+
+
+<button id="flip2" class="button" style="--x:166px; --y:9px;">
+	<span>2. UX/UI Design</span>
 </button>
-<button class="button" style="--x:166px; --y:9px;">
-	<span>Front/End Develeopment</span>
+<button id="flip3" class="button" style="--x:166px; --y:9px;">
+	<span>3. Front/End Develeopment</span>
 </button>
-<button class="button" style="--x:166px; --y:9px;">
-	<span>Back/End Development</span>
+<button id="flip4" class="button" style="--x:166px; --y:9px;">
+	<span>4. Back/End Development</span>
 </button>
 
 <footer>
   <br>
 	<a class="footer" href="https://github.com/pchen66/panolens.js/tree/master" target="_blank">Agumented reality</a>
-  
+
   <style>
     .footer{
       position: relative;
@@ -89,7 +144,11 @@ body {
     }
   </style>
 </footer>
-
+<script>
+  function myFunction() {
+    document.getElementById("button").style.color = "red";
+}
+</script>
 <script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
 <script>document.querySelector(".button").onmousemove = function (e) {
 	var x = e.pageX - e.target.offsetLeft;
@@ -102,5 +161,7 @@ body {
 };
 //# sourceURL=pen.js
 </script>
+
+
 </body>
 </html>
