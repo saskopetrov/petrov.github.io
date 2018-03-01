@@ -27,11 +27,14 @@ $(document).ready(function(){
     $("#flip4").click(function(){
         $("#panel4").slideToggle("slow");
     });
+    $("#flip5").click(function(){
+        $("#panel5").slideToggle("slow");
+    });
 });
 </script>
 
 <style> 
-#panel1, #panel2, #panel3, #panel4{
+#panel1, #panel2, #panel3, #panel4, #panel5{
     padding: 5px;
     text-align: center;
     color: black;
@@ -115,12 +118,11 @@ body {
 <div id="panel2">Panel 2</div>
 <div id="panel3">Panel 3</div>
 <div id="panel4">Panel 4</div>
+<div id="panel5">Panel 5</div>
 
 <button id="flip1" class="button" style="--x:166px; --y:9px;">
 	<span>1. Project Management</span>
 </button>
-
-
 
 <button id="flip2" class="button" style="--x:166px; --y:9px;">
 	<span>2. UX/UI Design</span>
@@ -130,6 +132,9 @@ body {
 </button>
 <button id="flip4" class="button" style="--x:166px; --y:9px;">
 	<span>4. Back/End Development</span>
+</button>
+<button id="flip5" class="button" style="--x:166px; --y:9px;">
+  <span>5. Maintenance & Update</span>
 </button>
 
 <footer>
