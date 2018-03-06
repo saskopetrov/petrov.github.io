@@ -1,171 +1,64 @@
-<html lang="en" class="">
-<head>
-	<script src="//static.codepen.io/assets/editor/live/console_runner-ce3034e6bde3912cc25f83cccb7caa2b0f976196f2f2d52303a462c826d54a73.js">
-		
-	</script>
-	<script src="//static.codepen.io/assets/editor/live/css_live_reload_init-890dc39bb89183d4642d58b1ae5376a0193342f9aed88ea04330dc14c8d52f55.js">
-	</script>
-	<meta charset="UTF-8">
-	<meta name="robots" content="noindex">
-	<link rel="shortcut icon" type="image/x-icon" href="//static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico">
-	<link rel="mask-icon" type="" href="//static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/electerious/pen/MQrRxX">
-  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script> 
-$(document).ready(function(){
-    $("#flip1").click(function(){
-        $("#panel1").slideToggle("slow");
-    });
-    $("#flip2").click(function(){
-        $("#panel2").slideToggle("slow");
-    });
-    $("#flip3").click(function(){
-        $("#panel3").slideToggle("slow");
-    });
-    $("#flip4").click(function(){
-        $("#panel4").slideToggle("slow");
-    });
-    $("#flip5").click(function(){
-        $("#panel5").slideToggle("slow");
-    });
-});
-</script>
-
-<style> 
-#panel1, #panel2, #panel3, #panel4, #panel5{
-    padding: 5px;
-    text-align: center;
-    color: black;
-    font-size: 1em;
-    padding: 50px;
-    display: none;
-    
-
-</style>
-
-<style class="cp-pen-styles">
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: block;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-  background:white;
-
-}
-
-.button {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  border: none;
-  color:white;
-  font-size: 1.2em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 100px;
-}
-.button span {
-  position: relative;
-  pointer-events: none;
-}
-.button::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #4405f7, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: width .2s ease, height .2s ease;
-  transition: width .2s ease, height .2s ease;
-}
-.button:hover::before {
-  --size: 400px;
-}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  transform: translateY(4px);
-}
-</style>
-
-</style>
-</style>
-</head>
-
-
-
-<body>
-  
-<div id="panel1">Panel 1</div>
-<div id="panel2">Panel 2</div>
-<div id="panel3">Panel 3</div>
-<div id="panel4">Panel 4</div>
-<div id="panel5">Panel 5</div>
-
-<button id="flip1" class="button" style="--x:166px; --y:9px;">
-	<span>1. Project Management</span>
-</button>
-
-<button id="flip2" class="button" style="--x:166px; --y:9px;">
-	<span>2. UX/UI Design</span>
-</button>
-<button id="flip3" class="button" style="--x:166px; --y:9px;">
-	<span>3. Front/End Develeopment</span>
-</button>
-<button id="flip4" class="button" style="--x:166px; --y:9px;">
-	<span>4. Back/End Development</span>
-</button>
-<button id="flip5" class="button" style="--x:166px; --y:9px;">
-  <span>5. Maintenance</span>
-</button>
-
-<footer>
-  <br>
-	<a class="footer" href="https://github.com/pchen66/panolens.js/tree/master" target="_blank">Agumented reality</a>
-
-  <style>
-    .footer{
-      position: relative;
-      padding-top: 20px;
-    }
-  </style>
-</footer>
-<script>
-  function myFunction() {
-    document.getElementById("button").style.color = "red";
-}
-</script>
-<script src="//static.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
-<script>document.querySelector(".button").onmousemove = function (e) {
-	var x = e.pageX - e.target.offsetLeft;
-	var y = e.pageY - e.target.offsetTop;
-
-	e.target.style.setProperty("--x", x + "px");
-	e.target.style.setProperty("--y", y + "px");
-
-
-};
-//# sourceURL=pen.js
-</script>
-
-
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="mobile-web-app-capable" content="yes" />		
+		<style type="text/css" title="Default">
+			body, div, h1, h2, h3, span, p {
+				font-family: Verdana,Arial,Helvetica,sans-serif;
+			}
+			/* fullscreen */
+			html {
+				height:100%;
+			}
+			body {
+				height:100%;
+				margin: 0px;
+				overflow:hidden; /* disable scrollbars */
+				font-size: 10pt;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
+			}
+			/* fix for scroll bars on webkit & >=Mac OS X Lion */ 
+			::-webkit-scrollbar {
+				background-color: rgba(0,0,0,0.5);
+				width: 0.75em;
+			}
+			::-webkit-scrollbar-thumb {
+    			background-color:  rgba(255,255,255,0.5);
+			}
+		</style>	
+	</head>
+	<body>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
+		<script type="text/javascript" src="pano2vr_player.js">
+		</script>
+		<script type="text/javascript" src="skin.js">
+		</script>
+		<div id="container" style="width:100%;height:100%;overflow:hidden;">
+		<br>Loading...<br><br>
+		This content requires HTML5 with CSS3 3D Transforms or WebGL.
+		</div>
+		<script type="text/javascript">
+	
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+		// add the skin object
+		skin=new pano2vrSkin(pano);
+		// load the configuration
+		window.addEventListener("load", function() {
+			pano.readConfigUrlAsync("pano.xml");
+		});
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - --> 
+		<!-- Hack needed to hide the url bar on iOS 9, iPhone 5s --> 
+		<div style="width:1px;height:1px;"></div>
+	</body>
 </html>
